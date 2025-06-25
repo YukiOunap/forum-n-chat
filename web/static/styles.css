@@ -1,0 +1,774 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Barlow Condensed", Arial, sans-serif;
+    color: #242931;
+    background-color: #ebebeb;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    display: inline;
+    vertical-align: center;
+    height: 40px;
+    margin: 0px 15px 10px 15px;
+    /* 任意の高さに調整 */
+    z-index: 10;
+}
+
+.underline {
+    position: relative;
+    margin: auto;
+    transform: skewX(-45deg);
+    height: 10px;
+    margin: 0 auto;
+    background-color: #DCF900;
+    z-index: -1;
+}
+
+.link {
+    color: #FF4545;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.button {
+    font-family: "Barlow Condensed", Arial, sans-serif;
+    font-size: larger;
+    font-weight: 500;
+    padding: 5px 10px 10px 10px;
+    border: none;
+    background-color: #DCF900;
+    border-radius: 0px 13px 0px 13px;
+    cursor: pointer;
+}
+
+input {
+    border-color: #d9d9d9;
+    border-width: 1px;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 5px;
+    width: 200px;
+    border-style: solid;
+}
+
+.icon {
+    display: inline;
+    margin: 0px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+label {
+    white-space: nowrap;
+}
+
+/* login page  ---------------------------------*/
+
+#login {
+    text-align: center;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#login .underline {
+    top: -20px;
+    width: 350px;
+    right: 5px;
+}
+
+.login_password {
+    position: relative;
+    left: 24px;
+}
+
+#login .button {
+    width: 80px;
+    height: 35px;
+    margin: 15px 10px 0px 10px;
+}
+
+#login p {
+    margin: 20px 30px 0px 30px;
+}
+
+/* signup page  ---------------------------------*/
+
+#signup {
+    text-align: center;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 5px;
+
+    display: none;
+}
+
+#signup .underline {
+    top: -20px;
+    width: 350px;
+    right: 5px;
+}
+
+.image_uploader {
+    position: relative;
+    margin: 10px;
+    left: 25px;
+    border: 0px;
+    vertical-align: auto;
+}
+
+.age {
+    position: relative;
+    left: 18px;
+}
+
+.select {
+    position: relative;
+    left: 8px;
+    width: 212px;
+    margin: 6px 12px;
+    padding: 5px;
+    border-color: #9e9e9e;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.first_name {
+    position: relative;
+    left: -2px;
+}
+
+.email {
+    position: relative;
+    left: 10px;
+}
+
+#signup .button {
+    width: 80px;
+    height: 35px;
+    margin: 15px 10px 0px 10px;
+}
+
+#signup p {
+    margin: 20px 30px 0px 30px;
+}
+
+/* home page  ---------------------------------*/
+#home {
+    display: none;
+}
+
+#window {
+    width: auto;
+    flex: 3;
+    min-width: 400px;
+    z-index: 1;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+/* header  ---------------------------------*/
+
+nav {
+    position: relative;
+    min-width: 670px;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 5px #dedede;
+    z-index: 2;
+}
+
+nav .logo {
+    margin: 15px 15px 15px 17px;
+}
+
+nav .box {
+    position: absolute;
+    width: 350px;
+    height: 0;
+    margin: 0px;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+    border-top: 70px solid #DCF900;
+    border-right: 50px solid transparent;
+    z-index: -1;
+}
+
+nav ul {
+    float: right;
+    display: flex;
+    list-style-type: none;
+    white-space: nowrap;
+    margin: 11px 20px 2px 0px;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+#nickname {
+    margin: 13px 0px 0px 20px;
+}
+
+#setting_link {
+    margin: 12px 0px 0px 15px;
+}
+
+#logout {
+    margin: 5px 0px 0px 20px;
+    padding: 6px 8px 1px 8px;
+    height: 30px;
+}
+
+main {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5px;
+}
+
+#no_post {
+    margin: 15px;
+}
+
+/* USER ------------------------------------------------------------------*/
+
+#chat {
+    display: none;
+}
+
+#user_list {
+    flex: 1;
+    border-bottom: 1px solid #dedede;
+    overflow-y: auto;
+    max-width: 300px;
+    min-width: 220px;
+    background-color: white;
+    height: 100vh;
+}
+
+.user {
+    flex-shrink: 0;
+    min-width: 300px;
+    height: 60px;
+    background-color: white;
+    padding: 0px 10px;
+    border-bottom: 1px solid #dedede;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.user h3,
+.user p {
+    font-weight: normal;
+}
+
+.unread h3,
+.unread p {
+    font-weight: bolder;
+}
+
+#user_list .user:hover {
+    background-color: #DCF900;
+}
+
+#user_list .user.selected {
+    background-color: #DCF900;
+}
+
+.user .account-name {
+    position: relative;
+    top: 12px;
+    margin: 8px;
+}
+
+.online {
+    position: relative;
+    margin: 15px;
+    top: 17px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin-top: 6px;
+    background-color: #22ff00;
+}
+
+.offline {
+    position: relative;
+    margin: 15px;
+    top: 17px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin-top: 6px;
+    background-color: #ff0000;
+}
+
+.user p {
+    position: relative;
+    top: 15px;
+    margin: 5px;
+}
+
+/* main  ------------------------------------------------------------------*/
+
+#posts {
+    padding: 0px;
+}
+
+#filter_form {
+    background-color: white;
+    padding: 10px;
+    border-bottom: 2px solid #dedede;
+    box-shadow: 0px 2px 5px #dedede;
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+#filter_form .button {
+    position: relative;
+    top: 2px;
+    font-size: medium;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+#filter_list {
+    margin: 10px 15px 10px 0px;
+}
+
+.post {
+    position: relative;
+    background-color: white;
+    border-bottom: 1px solid #dedede;
+    margin: 0px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.post:hover {
+    background-color: #DCF900;
+}
+
+.post h1 {
+    display: inline-block;
+    margin: 0px 10px 5px 0px;
+}
+
+.post h2 {
+    font-weight: normal;
+    font-size: larger;
+    display: inline-block;
+    margin: 0px 10px 5px 0px;
+    padding: 0px;
+}
+
+.date {
+    font-size: small;
+}
+
+.numberOfComments {
+    position: absolute;
+    font-size: x-large;
+    right: 15px;
+    top: 10px;
+    padding: 0px;
+}
+
+.post img {
+    display: inline-block;
+    width: 20px;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.category {
+    margin: 5px 5px 0px 5px;
+    padding: 5px;
+    border: none;
+    background-color: #DCF900;
+    border-radius: 0px 13px 0px 13px;
+}
+
+#create_post {
+    font-family: "Barlow Condensed", Arial, sans-serif;
+    font-size: larger;
+    background-color: #DCF900;
+    width: 140px;
+    height: 60px;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0px 0px 10px #bbbbbb;
+    display: flex;
+    flex-wrap: nowrap;
+    z-index: 1000;
+}
+
+#create_post img {
+    height: 20px;
+    margin: 15px;
+    padding: 0px;
+    position: relative;
+    top: 5px;
+}
+
+#create_post p {
+    position: relative;
+    top: 18px;
+    left: -5px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#create_post_form_bg {
+    position: fixed;
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    align-items: center;
+    /* Center align the form vertically */
+    justify-content: center;
+    /* Center align the form horizontally */
+
+    display: none;
+}
+
+#create_post_form {
+    width: 600px;
+    text-align: center;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    border-radius: 5px;
+    z-index: 100;
+
+    display: none;
+}
+
+#create_post_form img {
+    position: absolute;
+    top: -40px;
+    right: -50px;
+    width: 35px;
+    cursor: pointer;
+}
+
+#create_post_form h1 {
+    margin: 0;
+}
+
+#create_post_form .underline {
+    top: -10px;
+    width: 160px;
+}
+
+#title_input {
+    width: 80%;
+    border: 1px solid #848484;
+}
+
+#content_input {
+    width: 80%;
+    resize: vertical;
+}
+
+#post_form .button {
+    height: 35px;
+    width: 60px;
+    margin: 10px 0px 0px 0px;
+}
+
+#post_form div label {
+    text-align: left;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+    position: relative;
+    top: 2px;
+    width: 15px;
+    height: 15px;
+    margin: 3px;
+}
+
+#add_category button {
+    position: relative;
+    font-family: "Barlow Condensed", Arial, sans-serif;
+    font-size: medium;
+    font-weight: bolder;
+    background-color: #DCF900;
+    border: none;
+    height: 28px;
+    width: 40px;
+    border-radius: 2px;
+    top: 2px;
+}
+
+/* POST DETAIL ---------------------------------*/
+
+#post_detail_main {
+    background-color: white;
+}
+
+#post {
+    position: relative;
+    padding: 15px;
+}
+
+#post h1 {
+    margin: 5px;
+    display: inline-block;
+}
+
+#post h2 {
+    margin: 5px;
+    font-size: larger;
+    font-weight: normal;
+    display: inline-block;
+}
+
+#post .numberOfComments {
+    margin: 13px;
+}
+
+#post p {
+    margin: 15px;
+}
+
+#comments {
+    height: 300px;
+    overflow-y: auto;
+    z-index: 1;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#post_detail_main h3 {
+    margin: 0px 0px 0px 20px;
+    font-weight: normal;
+}
+
+#comments p {
+    margin: 10px 15px;
+}
+
+.comment {
+    border: 1px solid #d9d9d9;
+    border-radius: 3px;
+    margin: 10px;
+    padding: 15px;
+}
+
+.comment p {
+    margin: 10px;
+}
+
+#post_detail_main form {
+    box-shadow: 0px -2px 5px #dedede;
+    z-index: 10;
+    background-color: white;
+    height: 140px;
+}
+
+#post_detail_main textarea {
+    margin: 10px;
+    padding: 10px;
+    width: 90%;
+    height: 40px;
+    border: 1px solid #d9d9d9;
+    border-radius: 3px;
+    resize: none;
+}
+
+#post_detail_main .button {
+    display: block;
+    position: relative;
+    right: 0px;
+    margin: 5px 15px;
+    margin-left: auto;
+    padding: 5px 10px;
+}
+
+/* CHAT ROOM ---------------------------------*/
+
+#chat_room {
+    flex-grow: 3;
+    min-width: 400px;
+}
+
+.back_home {
+    padding: 18px 10px 10px 10px;
+    border-bottom: 2px solid #d9d9d9;
+    background-color: white;
+}
+
+.back_home_link {
+    cursor: pointer;
+}
+
+.back_home p {
+    position: relative;
+    top: -8px;
+    display: inline;
+}
+
+#chat_room .user {
+    position: relative;
+    box-shadow: 0px 2px 5px #dedede;
+    z-index: 10;
+}
+
+#chat_room h2 {
+    position: relative;
+    font-size: large;
+    font-weight: bolder;
+    top: 13px;
+}
+
+#chat_room .offline,
+#chat_room .online {
+    position: relative;
+    font-size: large;
+    font-weight: bolder;
+    top: 18px;
+}
+
+#chat_room .user p {
+    position: relative;
+    font-size: large;
+    top: 15px;
+}
+
+#chat_room form {
+    box-shadow: 0px -2px 5px #dedede;
+    z-index: 10;
+    background-color: white;
+    height: 140px;
+}
+
+#chat_room textarea {
+    margin: 10px;
+    padding: 10px;
+    width: 90%;
+    height: 40px;
+    border: 1px solid #d9d9d9;
+    border-radius: 3px;
+    resize: none;
+}
+
+#chat_room .button {
+    display: block;
+    position: relative;
+    right: 0px;
+    margin: 5px 15px;
+    margin-left: auto;
+    padding: 5px 10px;
+}
+
+#chat_room_main {
+    background-color: white;
+    overflow-y: auto;
+}
+
+#chat_history {
+    background-color: white;
+    border: 0;
+    height: 300px;
+    overflow-y: auto;
+    z-index: 1;
+    padding: 15px;
+    /* 内側に余白を追加 */
+    box-sizing: border-box;
+    /* paddingを含めて要素のサイズを計算 */
+}
+
+#chat_history p {
+    margin: 5px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.other,
+.me {
+    width: auto;
+    /* 要素の幅を自動調整 */
+    max-width: 90%;
+    /* 最大幅を設定 */
+    margin: 10px 0;
+    /* 上下に余白を設定 */
+    padding: 5px;
+    /* 内側に余白を設定 */
+    box-sizing: border-box;
+}
+
+.other {
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    margin-left: 0;
+    /* 右寄せ */
+    /* 右余白なし */
+}
+
+.me {
+    background-color: #DCF900;
+    border-radius: 5px;
+    margin-left: auto;
+    /* 左余白なし */
+    margin-right: 0;
+    /* 左寄せ */
+}
+
+#chat_history .time {
+    font-size: small;
+    text-align: right;
+}
+
+
+/* DISPLAY INITIALIZATION: set every section none ---------------------------------*/
+
+#login,
+#signup,
+#home,
+#create_post_form_bg {
+    display: none;
+}

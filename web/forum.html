@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kood/Johvi VIP</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- LOG IN PAGE ---------------------------------------------------------------------------------------------- -->
+
+    <div id="login">
+        <img class="logo" src="/static/assets/title.png" alt="kood/Johvi VIP" />
+        <div class="underline"></div>
+        <form id="login_form" action="/login" method="POST">
+            <label>Nickname / E-mail <input required type="text" name="nickname"></label><br>
+            <label>Password <input class="login_password" required class="password" type="password"
+                    name="password"></label><br>
+            <button class="button" type="submit">Log In</button>
+        </form>
+        <p>Don't have an account yet? <span class="link" id="signup_link">Sign up</span> from here!</p>
+    </div>
+
+    <!-- SIGN UP PAGE ---------------------------------------------------------------------------------------------- -->
+
+    <div id='signup'>
+        <img class='logo' src='static/assets/title.png' alt="kood/Johvi VIP" />
+        <div class="underline"></div>
+        <form id="signup_form" action="/signup" method="POST">
+            <label>Nickname<input required type="text" name="nickname" maxlength="20"></label><br>
+            <label>Age<input class="age" required type="number" name="age"></label><br>
+            <label>Gender<select class="select" required name="gender">
+                    <option value="">--Please choose an option--</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select></label><br>
+            <label>First Name <input class="first_name" required type="text" name="first_name"
+                    maxlength="20"></label><br>
+            <label>Last Name <input class="last_name" required type="text" name="last_name" maxlength="20"></label><br>
+            <label>E-mail <input type="email" class="email" required name="email"></label><br>
+            <label>Password <input required class="signup_password" type="password" name="password"
+                    maxlength="20"></label><br>
+            <button class="button" type="submit">Sigh Up</button>
+        </form>
+        <p>Already have an account? <span class="link" id="login_link">Log in</span> from here!</p>
+    </div>
+
+    <!-- MAIN PAGE ---------------------------------------------------------------------------------------------- -->
+
+    <div id='home'>
+
+        <!-- CREATE POST FORM SECTION ---------------------------------------------------------------------------------------------- -->
+
+        <div id="create_post_form_bg">
+            <section id="create_post_form">
+                <img src='/static/assets/close.png' alt="close" />
+
+                <h1>Create New Post</h1>
+                <div class="underline"></div><br>
+
+                <form id="add_category">
+                    Add New Category:
+                    <input type="text" placeholder="Category Name" name="newCategory" maxlength="20" required>
+                    <button type="submit">ADD</button>
+                </form><br>
+
+                <form id="post_form">
+                    <div>Category:
+                    </div>
+                    <input type="text" id="title_input" name="title" placeholder="Title" maxlength="40" required /><br>
+                    <textarea id="content_input" name="content" rows="10" cols="30" required></textarea><br>
+                    <button class="button" type="submit">Post!</button>
+                </form>
+
+            </section>
+        </div>
+
+        <!-- NAV SECTION ---------------------------------------------------------------------------------------------- -->
+
+        <nav>
+            <img class='logo' src='/static/assets/title.png' alt="kood/Johvi VIP" />
+            <div class="box"></div>
+            <ul>
+                <li id="nickname">Account Name</li>
+                <li class="button" id="logout">Log out</li>
+            </ul>
+        </nav>
+
+
+        <!-- POSTS SECTION ---------------------------------------------------------------------------------------------- -->
+
+        <main>
+
+            <!-- USER LIST SECTION ---------------------------------------------------------------------------------------------- -->
+
+            <section id="user_list">
+            </section>
+
+            <!-- CHANGING SECTION ---------------------------------------------------------------------------------------------- -->
+
+            <div id="window">
+
+                <section id="posts">
+
+                    <span id="create_post">
+                        <img src='/static/assets/createpost.png' alt="create post" />
+                        <p>Create Post</p>
+                    </span>
+
+                    <form id="filter_form" action="/filter" method="POST">
+                        <label>Filter: <select id="filter_list" required name="filter">
+                                <option value="all">No filter (All posts)</option>
+                            </select></label>
+                        <button class="button" type="submit">Apply</button>
+                    </form>
+
+                    <div id="posts_list"></div>
+
+                </section>
+
+                <!-- POST DETAIL SECTION ---------------------------------------------------------------------------------------------- -->
+
+                <section id="post_detail">
+                    <div class="back_home">
+                        <span class="back_home_link">
+                            <img src="/static/assets/arrow_left.png" alt="<-" />
+                            <p>Back to Home</p>
+                        </span>
+                    </div>
+                    <div id="post_detail_main">
+                    </div>
+                </section>
+
+                <!-- CHAT SECTION ---------------------------------------------------------------------------------------------- -->
+
+                <section id="chat_room">
+                    <div class="back_home">
+                        <span class="back_home_link">
+                            <img src="/static/assets/arrow_left.png" alt="<-" />
+                            <p>Back to Home</p>
+                        </span>
+                    </div>
+                    <div id="chat_room_main">
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Import the JavaScript file here -->
+    <script type="module" src="/static/js/globals.js"></script>
+    <script type="module" src="/static/js/debounce.js"></script>
+    <script type="module" src="/static/js/format_time.js"></script>
+    <script type="module" src="/static/js/websocket.js"></script>
+    <script type="module" src="/static/js/login_signup.js"></script>
+    <script type="module" src="/static/js/render_home.js"></script>
+    <script type="module" src="/static/js/display_post_detail.js"></script>
+    <script type="module" src="/static/js/display_chatroom.js"></script>
+
+</body>
+
+</html>
