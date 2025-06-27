@@ -10,7 +10,12 @@ import (
 	"github.com/gorilla/websocket"
 )
 
-var upgrader = &websocket.Upgrader{}
+var upgrader = &websocket.Upgrader{
+	CheckOrigin: func(r *http.Request) bool {
+		origin := r.Header.Get("Origin")
+		return origin == "https://real-time-forum-gs37.onrender.com"
+	},
+}
 
 var (
 	onlineUsers = make(map[string]map[string]*websocket.Conn) // a map has usernames as keys and the value is the map of the users' connections by sessionID as keys
