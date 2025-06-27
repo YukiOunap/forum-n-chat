@@ -6,7 +6,7 @@ import { insertChat } from './display_chatroom.js';
 export { openWebSocket };
 
 function openWebSocket() {
-    globals.ws = new WebSocket(`wss://https://real-time-forum-gs37.onrender.com/ws?user=${globals.LoggedInUser}`);
+    globals.ws = new WebSocket(`wss://real-time-forum-gs37.onrender.com/ws?user=${globals.LoggedInUser}`);
 
     globals.ws.onopen = function () {
         console.log("WebSocket connection established for " + globals.LoggedInUser);
