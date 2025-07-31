@@ -1,19 +1,17 @@
 # Forum n' Chat
 
-Go program run a html server, convert and display user input as suitable ascii-art.
+Web forum app with chat function between users run by Go server.
 
-## Usage: how to run
-1. Initiate server on command line:
-   ```
-   go run .
-   ```
-2. Access the page: http://localhost:8080/
+## Used Technologies
 
-If you use browser back/forward, the page may have glitch. In that case, refreshing the page may reset the situation but my recommendation is just don't use them. I tried to prevent these browser functions but it seems hard because many browsers prevent the scripts from controlling browsing history. If you know the trick, I'd happy to hear!
+- html
+- css
+- js
+- Go
+  - standard packages
+  - Gorilla websocket
+  - sqlite3
 
-## Audit
-Follow the instructions in the audit page: https://github.com/01-edu/public/tree/master/subjects/real-time-forum/audit
+## Installation & How to Use
 
-## Author
-
-Yuki Kaneko
+This app is being hosted on Render. You can access https://forum-n-chat.onrender.com and start trying.
