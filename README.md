@@ -1,4 +1,6 @@
-# real-time-forum
+# Forum n' Chat
+
+Go program run a html server, convert and display user input as suitable ascii-art.
 
 ## Usage: how to run
 1. Initiate server on command line:
